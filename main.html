@@ -1,0 +1,581 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2M Europe. | European Architecture Tours</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Arc Animations */
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translate(-50%, 60%); }
+            to { opacity: 1; transform: translate(-50%, 50%); }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation-name: fade-in-up;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-fade-in {
+            animation-name: fade-in;
+            animation-duration: 0.8s;
+            animation-timing-function: ease-out;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 antialiased selection:bg-zinc-200 selection:text-zinc-900 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200/80 bg-white/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+              <a href="#" class="hover:opacity-70 transition-opacity">
+                  <img src="A2MTranspLogo.png"  alt="A2M Europe Tours" class="h-20 w-auto" />
+              </a>
+                <a href="#" class="text-lg font-semibold tracking-tighter hover:opacity-70 transition-opacity">A2M Europe Tours.</a>
+            </div>
+            <div class="flex items-center gap-4">
+              <!--   <button class="hidden md:flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors">
+                    <iconify-icon icon="solar:magnifer-linear" width="18"></iconify-icon>
+                    Search
+                </button>-->
+                <div class="w-px h-4 bg-zinc-200 hidden md:block"></div>
+                <a href="#contact" class="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-lg hover:bg-zinc-800 transition-colors shadow-sm">
+                    Inquire
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Arc Gallery Hero Section -->
+    <header class="relative overflow-hidden bg-zinc-50 text-zinc-900 min-h-[90vh] flex flex-col pt-20">
+        <div id="arc-container" class="relative mx-auto w-full transition-all duration-500 ease-out" style="height: 500px;">
+            <div id="arc-pivot" class="absolute left-1/2 bottom-0 -translate-x-1/2 w-0 h-0"></div>
+        </div>
+
+        <div class="relative z-10 flex-1 flex flex-col items-center justify-start px-6 -mt-32 md:-mt-40 lg:-mt-48 pointer-events-none">
+            <div class="text-center max-w-3xl px-6 opacity-0 animate-fade-in pointer-events-auto" style="animation-delay: 800ms; animation-fill-mode: forwards;">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 bg-white/80 backdrop-blur text-xs font-medium text-zinc-600 mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Now booking: Summer 2026
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-zinc-900 mb-6 leading-[0.95]">
+                    The European <br> <span class="text-zinc-400">Silhouette.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-zinc-500 max-w-xl mx-auto leading-relaxed font-light mb-10">
+                    Immersive architectural expeditions designed for the modern observer. Discover the structures that define a continent.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-zinc-900 text-white px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-200 hover:shadow-xl hover:-translate-y-0.5">
+                      <a href="#contact"> <!-- class="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-lg hover:bg-zinc-800 transition-colors shadow-sm"> -->
+                          Contact Us
+                      </a>
+                        Call Us
+                        <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
+                    </button>
+                      <!--<button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white border border-zinc-200 text-zinc-700 px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-zinc-50 hover:border-zinc-300 transition-all">
+                        <iconify-icon icon="solar:play-circle-linear" width="18"></iconify-icon>
+                        Contact Us
+                        <a href="#contact"> class="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-lg hover:bg-zinc-800 transition-colors shadow-sm">
+                            Contact Us
+                        </a>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-zinc-50 via-zinc-50/80 to-transparent pointer-events-none z-0"></div>
+    </header>
+
+    <!-- Parallax Archive Gallery -->
+    <section class="border-t border-zinc-200 bg-white mt-14">
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-10">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl font-semibold tracking-tight text-zinc-900">The Archive</h2>
+                    <p class="text-zinc-500 text-sm mt-2">A visual study of form, light, and material from the exterior.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parallax Container -->
+        <div id="parallax-scroll-container" class="h-[45rem] w-full overflow-y-auto bg-white hide-scrollbar scroll-smooth relative border-y border-zinc-100">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 py-20 items-start">
+
+                <!-- Column 1 -->
+                <div id="parallax-col-1" class="grid gap-10 origin-top-left will-change-transform">
+                    <!-- Images injected via JS -->
+                </div>
+
+                <!-- Column 2 (Static/Center) -->
+                <div id="parallax-col-2" class="grid gap-10">
+                    <!-- Images injected via JS -->
+                </div>
+
+                <!-- Column 3 -->
+                <div id="parallax-col-3" class="grid gap-10 origin-top-right will-change-transform">
+                    <!-- Images injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Destinations -->
+    <section class="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-2xl font-semibold tracking-tight text-zinc-900">Curated Destinations</h2>
+                    <p class="text-zinc-500 text-sm mt-2">Expert-led tours through Europe's structural icons.</p>
+                </div>
+                <a href="#" class="hidden sm:flex items-center gap-1 text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors">
+                    View all regions
+                    <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                <!-- Large Card: Berlin -->
+                <div class="group relative md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&amp;fit=crop&amp;q=80&amp;w=1600" alt="Berlin" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                        <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 rounded-md text-[10px] font-semibold text-white mb-3 tracking-wide uppercase">Germany</span>
+                            <h3 class="text-2xl font-medium text-white tracking-tight mb-2">Berlin: The Fernsehturm</h3>
+                            <p class="text-zinc-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                Rise above the city with the iconic TV Tower and explore the concrete exteriors of Alexanderplatz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Card: Copenhagen -->
+                <div class="group relative md:col-span-2 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[250px] md:min-h-0">
+                    <img src=" https://images.unsplash.com/photo-1513622118278-bc041b3c13ed?q=80&w=2071&auto=format&fit=crop&mp;q=80&amp;w=1600" alt="Copenhagen" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                        <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">Denmark</span>
+                        <h3 class="text-xl font-medium text-white tracking-tight">Copenhagen: Waterfront Facades</h3>
+                    </div>
+                </div>
+
+                <!-- Small Card: Barcelona -->
+                <div class="group relative rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[200px] md:min-h-0">
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&amp;fit=crop&amp;q=80&amp;w=1600" alt="Barcelona" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                         <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">Spain</span>
+                        <h3 class="text-lg font-medium text-white tracking-tight">Gaudí's Sagrada</h3>
+                    </div>
+                </div>
+
+                <!-- Small Card: Paris -->
+                <div class="group relative rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[200px] md:min-h-0">
+                    <img src="https://images.unsplash.com/photo-1459455356093-6495cff2a2c4?q=80&w=1974&auto=format&fit=crop&amp;q=80&amp;w=1600" alt="Paris" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                         <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">France</span>
+                        <h3 class="text-lg font-medium text-white tracking-tight">The Louvre Pyramid</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px] mt-4">
+
+              <!-- Small Card: Hungary -->
+              <div class="group relative rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[200px] md:min-h-0">
+                  <img src="https://images.unsplash.com/photo-1616432902940-b7a1acbc60b3?q=80&w=2070&auto=format&fit=crop&amp;q=80&amp;w=1600" alt="Hungary" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                       <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">Hungary</span>
+                      <h3 class="text-lg font-medium text-white tracking-tight">Hungarian Pavilion</h3>
+                  </div>
+              </div>
+
+              <!-- Small Card: Netherlands -->
+              <div class="group relative rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[200px] md:min-h-0">
+                  <img src="https://images.unsplash.com/photo-1614003318171-d790bc069754?q=80&w=2061&auto=format&fit=crop&amp;q=80&amp;w=1600" alt="Netherlands" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                       <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">Netherlands</span>
+                      <h3 class="text-lg font-medium text-white tracking-tight">Schröder House</h3>
+                  </div>
+              </div>
+                <!-- Large Card: Austria -->
+                <div class="group relative md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1597086831879-756db15e81d3?q=80&w=1974&auto=format&fit=crop&amp;q=80&amp;w=1600" alt="Austria" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                        <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 rounded-md text-[10px] font-semibold text-white mb-3 tracking-wide uppercase">Austria</span>
+                            <h3 class="text-2xl font-medium text-white tracking-tight mb-2">Hallstat: Alpine Vernacular Architecture</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Card: Italy -->
+                <div class="group relative md:col-span-2 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 min-h-[250px] md:min-h-0">
+                    <img src=" https://images.unsplash.com/photo-1555992828-35627f3b373f?q=80&w=2071&auto=format&fit=crop&mp;q=80&amp;w=1600" alt="Italy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+                        <span class="inline-block px-2 py-1 bg-white/20 backdrop-blur-md border border-white/10 w-fit rounded-md text-[10px] font-semibold text-white mb-2 tracking-wide uppercase">Italy</span>
+                        <h3 class="text-xl font-medium text-white tracking-tight">Roman Architecture</h3>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white border-y border-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-900">
+                        <iconify-icon icon="solar:ruler-pen-linear" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 tracking-tight">Expert-Led Analysis</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed">
+                        Every tour is guided by practicing architects or historians, offering technical insight beyond the facade.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-900">
+                        <iconify-icon icon="solar:key-linear" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 tracking-tight">Private Access</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed">
+                        Gain entry to private grounds and foundations not typically open to the general public.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-900">
+                        <iconify-icon icon="solar:album-linear" width="20"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-zinc-900 tracking-tight">Curated Portfolios</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed">
+                        Receive a high-quality photo book and blueprint analysis of the sites visited upon completion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+  <section id="contact" class="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
+      <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+              <h2 class="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">Get in Touch</h2>
+              <p class="text-zinc-500 text-base max-w-xl mx-auto">Have questions about our tours or want to plan a custom architectural expedition? We'd love to hear from you.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+              <!-- Contact Form -->
+              <div class="bg-white rounded-2xl border border-zinc-200 p-8 shadow-sm">
+                  <h3 class="text-xl font-medium tracking-tight text-zinc-900 mb-6">Send us a message</h3>
+                  <form action="https://formspree.io/f/mbdarndy" method="POST" class="space-y-5">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                          <div>
+                              <label for="first-name" class="block text-sm font-medium text-zinc-700 mb-2">First name</label>
+                              <input type="text" id="first-name" name="first-name" placeholder="John" class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400">
+                          </div>
+                          <div>
+                              <label for="last-name" class="block text-sm font-medium text-zinc-700 mb-2">Last name</label>
+                              <input type="text" id="last-name" name="last-name" placeholder="Doe" class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400">
+                          </div>
+                      </div>
+                      <div>
+                          <label for="email" class="block text-sm font-medium text-zinc-700 mb-2">Email address</label>
+                          <input type="email" id="email" name="email" placeholder="john@example.com" class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400">
+                      </div>
+                      <div>
+                          <label for="phone" class="block text-sm font-medium text-zinc-700 mb-2">Phone number <span class="text-zinc-400 font-normal">(optional)</span></label>
+                          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400">
+                      </div>
+                      <div>
+                          <label for="subject" class="block text-sm font-medium text-zinc-700 mb-2">Subject</label>
+                          <input type="text" id="subject" name="subject" placeholder="Tour inquiry" class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400">
+                      </div>
+                      <div>
+                          <label for="message" class="block text-sm font-medium text-zinc-700 mb-2">Message</label>
+                          <textarea id="message" name="message" rows="4" placeholder="Tell us about your travel plans or ask any questions..." class="w-full bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 focus:ring-1 focus:ring-zinc-400 transition-colors placeholder:text-zinc-400 resize-none"></textarea>
+                      </div>
+                      <button type="submit" class="w-full flex items-center justify-center gap-2 bg-zinc-900 text-white px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-zinc-800 transition-all shadow-sm hover:shadow-md">
+                          Send Message
+                          <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
+                      </button>
+                  </form>
+              </div>
+
+              <!-- Contact Details -->
+              <div class="flex flex-col gap-8">
+                  <div>
+                      <h3 class="text-xl font-medium tracking-tight text-zinc-900 mb-6">Contact Information</h3>
+                      <p class="text-sm text-zinc-500 leading-relaxed mb-8">Reach out to us through any of the following channels. Our team typically responds within 24 hours.</p>
+                  </div>
+
+                  <!-- Contact Cards -->
+                  <div class="space-y-4">
+                      <!-- Email -->
+                      <a href="mailto:hello@archt.tours" class="group flex items-start gap-4 p-5 bg-white rounded-xl border border-zinc-200 hover:border-zinc-300 hover:shadow-sm transition-all">
+                          <div class="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-600 group-hover:bg-zinc-900 group-hover:text-white group-hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:letter-linear" width="22"></iconify-icon>
+                          </div>
+                          <div>
+                              <p class="text-sm font-medium text-zinc-900 mb-1">Email</p>
+                              <p class="text-sm text-zinc-500 group-hover:text-zinc-700 transition-colors">hello@A2Meurope.tours</p>
+                          </div>
+                      </a>
+
+                      <!-- Phone -->
+                      <a href="tel:+44207123456" class="group flex items-start gap-4 p-5 bg-white rounded-xl border border-zinc-200 hover:border-zinc-300 hover:shadow-sm transition-all">
+                          <div class="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-600 group-hover:bg-zinc-900 group-hover:text-white group-hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:phone-linear" width="22"></iconify-icon>
+                          </div>
+                          <div>
+                              <p class="text-sm font-medium text-zinc-900 mb-1">Phone</p>
+                              <p class="text-sm text-zinc-500 group-hover:text-zinc-700 transition-colors">+49 157 3900 3386</p>
+                          </div>
+                      </a>
+
+                      <!-- Address -->
+                      <div class="group flex items-start gap-4 p-5 bg-white rounded-xl border border-zinc-200">
+                          <div class="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-600">
+                              <iconify-icon icon="solar:map-point-linear" width="22"></iconify-icon>
+                          </div>
+                          <div>
+                              <p class="text-sm font-medium text-zinc-900 mb-1">Office</p>
+                              <p class="text-sm text-zinc-500">Egger Str. 2<br>Deggendorf, Munich 94469<br>Germany</p>
+                          </div>
+                      </div>
+
+                      <!-- Business Hours -->
+                      <div class="group flex items-start gap-4 p-5 bg-white rounded-xl border border-zinc-200">
+                          <div class="w-12 h-12 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-600">
+                              <iconify-icon icon="solar:clock-circle-linear" width="22"></iconify-icon>
+                          </div>
+                          <div>
+                              <p class="text-sm font-medium text-zinc-900 mb-1">Business Hours</p>
+                              <p class="text-sm text-zinc-500">Monday – Friday: 9:00 AM – 6:00 PM (GMT)<br>Saturday: 10:00 AM – 4:00 PM<br>Sunday: Closed</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Social Links -->
+                  <div class="mt-4">
+                      <p class="text-sm font-medium text-zinc-900 mb-4">Follow us</p>
+                      <div class="flex gap-3">
+                          <a href="#" class="w-10 h-10 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-500 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:camera-linear" width="18"></iconify-icon>
+                          </a>
+                          <a href="#" class="w-10 h-10 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-500 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:videocamera-linear" width="18"></iconify-icon>
+                          </a>
+                          <a href="#" class="w-10 h-10 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-500 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:chat-round-dots-linear" width="18"></iconify-icon>
+                          </a>
+                          <a href="#" class="w-10 h-10 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-zinc-500 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
+                              <iconify-icon icon="solar:earth-linear" width="18"></iconify-icon>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-zinc-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-lg font-semibold tracking-tighter text-zinc-900">A2M Europe Tours.</a>
+                    <p class="mt-4 text-xs text-zinc-500 leading-relaxed max-w-xs">
+                        Curating the world's finest architectural experiences for the discerning traveler.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-sm font-medium text-zinc-900 mb-4">Destinations</h5>
+                    <ul class="space-y-3 text-sm text-zinc-500">
+                        <li><a class="hover:text-zinc-900 transition-colors">Western Europe</a></li>
+                        <li><a class="hover:text-zinc-900 transition-colors">Scandinavia</a></li>
+                        <li><a class="hover:text-zinc-900 transition-colors">The Balkans</a></li>
+                        <li><a class="hover:text-zinc-900 transition-colors">Southern Europe</a></li>
+                        <li><a class="hover:text-zinc-900 transition-colors">Benelux</a></li>
+                        <li><a class="hover:text-zinc-900 transition-colors">Alpine Region</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-medium text-zinc-900 mb-4">Company</h5>
+                    <ul class="space-y-3 text-sm text-zinc-500">
+                        <li><a  class="hover:text-zinc-900 transition-colors">About Us</a></li>
+                        <li><a  class="hover:text-zinc-900 transition-colors">Journal</a></li>
+                        <li><a  class="hover:text-zinc-900 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-medium text-zinc-900 mb-4">Newsletter</h5>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="email@address.com" class="bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-400 focus:ring-0 transition-colors">
+                        <button class="bg-zinc-900 text-white rounded-lg px-3 py-2 text-sm font-medium hover:bg-zinc-800 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-zinc-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-zinc-400">© 2026 A2M Europe Tours. All rights reserved.</p>
+                <div class="flex gap-6 text-zinc-400">
+                    <a href="#" class="hover:text-zinc-900 transition-colors"><iconify-icon icon="solar:camera-linear" width="20"></iconify-icon></a>
+                    <a href="#" class="hover:text-zinc-900 transition-colors"><iconify-icon icon="solar:earth-linear" width="20"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- ARC ANIMATION LOGIC ---
+            const arcContainer = document.getElementById('arc-container');
+            const pivot = document.getElementById('arc-pivot');
+            const config = { startAngle: 20, endAngle: 160, radiusLg: 480, radiusMd: 360, radiusSm: 260, cardSizeLg: 120, cardSizeMd: 100, cardSizeSm: 80 };
+
+            // Famous European Exteriors for Arc Header
+            const arcImages = [
+                'https://images.unsplash.com/photo-1677690489325-e6a4d2594d76?q=80&w=987&auto=format&fit=crop', //
+                'https://images.unsplash.com/photo-1726416040293-0ba2618b4f86?q=80&w=2070&auto=format&fit=crop', // Louvre Pyramid
+                'https://images.unsplash.com/photo-1630839625742-fbb52bf31f76?q=80&w=987&auto=format&fit=crop', // Sagrada Familia
+                'https://images.unsplash.com/photo-1579282240050-352db0a14c21?q=80&w=952&auto=format&fit=crop', // Colosseum Rome
+                'https://images.unsplash.com/photo-1626285220266-e35bd313d05b?q=80&w=1035&auto=format&fit=crop', // Paris Haussmann
+                'https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=400&auto=format&fit=crop', // Big Ben / Elizabeth Tower
+                'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?q=80&w=400&auto=format&fit=crop', // Paris Tower
+                'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=400&auto=format&fit=crop'  // German Modern
+            ];
+
+            function updateArcLayout() {
+                const width = window.innerWidth;
+                let radius, cardSize;
+                if (width < 640) { radius = config.radiusSm; cardSize = config.cardSizeSm; }
+                else if (width < 1024) { radius = config.radiusMd; cardSize = config.cardSizeMd; }
+                else { radius = config.radiusLg; cardSize = config.cardSizeLg; }
+
+                arcContainer.style.height = `${radius * 1.2}px`;
+                const count = arcImages.length;
+                const step = (config.endAngle - config.startAngle) / (Math.max(count, 2) - 1);
+                pivot.innerHTML = '';
+
+                arcImages.forEach((src, i) => {
+                    const angle = config.startAngle + step * i;
+                    const angleRad = (angle * Math.PI) / 180;
+                    const x = Math.cos(angleRad) * radius;
+                    const y = Math.sin(angleRad) * radius;
+
+                    const card = document.createElement('div');
+                    card.className = 'absolute opacity-0 animate-fade-in-up';
+                    card.style.cssText = `width:${cardSize}px;height:${cardSize}px;left:calc(50% + ${x}px);bottom:${y}px;transform:translate(-50%,50%);animation-delay:${i * 100}ms;animation-fill-mode:forwards;z-index:${count - i};`;
+
+                    const inner = document.createElement('div');
+                    inner.className = 'w-full h-full rounded-2xl shadow-xl overflow-hidden ring-1 ring-zinc-200 bg-zinc-200 transition-transform duration-300 hover:scale-110';
+                    inner.style.transform = `rotate(${angle / 4}deg)`;
+
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.className = 'block w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300';
+
+                    inner.appendChild(img);
+                    card.appendChild(inner);
+                    pivot.appendChild(card);
+                });
+            }
+            updateArcLayout();
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(updateArcLayout, 100);
+            });
+
+
+            // --- PARALLAX SCROLL COMPONENT LOGIC ---
+            const scrollContainer = document.getElementById('parallax-scroll-container');
+            const col1 = document.getElementById('parallax-col-1');
+            const col2 = document.getElementById('parallax-col-2');
+            const col3 = document.getElementById('parallax-col-3');
+
+            // Famous European Exteriors for Archive
+            const parallaxImages = [
+                // Column 1 (Left)
+                "https://images.unsplash.com/photo-1603199766980-fdd4ac568a11?q=80&w=987&auto=format&fit=crop&q=80&w=600", // Eiffel Tower
+                "https://images.unsplash.com/photo-1728249960363-13079cc2c6f6?q=80&w=987&auto=format&fit=crop&q=80&w=600", // Duomo di Milano
+                "https://images.unsplash.com/photo-1579282240050-352db0a14c21?q=80&w=952&auto=format&fit=crop&q=80&w=600", // Neuschwanstein Castle
+                "https://images.unsplash.com/photo-1637013539928-12adba08497a?q=80&w=1035&auto=format&fit=crop&q=80&w=600", // Copenhagen Modern
+
+                // Column 2 (Center)
+                "https://images.unsplash.com/photo-1653384889067-7376de3b167d?q=80&w=1970&auto=format&fit=crop&q=80&w=600", // The Shard London
+                "https://images.unsplash.com/photo-1597822099378-543481ac84a2?q=80&w=927&auto=format&fit=crop&q=80&w=600", // Pantheon Rome
+                "https://images.unsplash.com/photo-1577462282244-b58c2816d686?q=80&w=987&auto=format&fit=crop&q=80&w=600", // Guggenheim Bilbao
+                "https://images.unsplash.com/photo-1706812048184-8d5ac3736fd2?q=80&w=1035&auto=format&fit=crop&q=80&w=600", // Berlin TV Tower
+
+                // Column 3 (Right)
+                "https://images.unsplash.com/photo-1572255486106-e01e6932cdcf?q=80&w=1064&auto=format&fit=crop&q=80&w=600", // Florence Cathedral
+                "https://images.unsplash.com/photo-1583295125721-766a0088cd3f?q=80&w=1064&auto=format&fit=crop&q=80&w=600", // Amsterdam Canals
+                "https://images.unsplash.com/photo-1581683767275-e4347c79e0a2?q=80&w=987&auto=format&fit=crop&q=80&w=600", // Atomium Brussels
+                "https://images.unsplash.com/photo-1753798893785-30842fabf578?q=80&w=1036&auto=format&fit=crop&q=80&w=600"  // Vienna Architecture
+            ];
+
+            // Split images into 3 parts
+            const third = Math.ceil(parallaxImages.length / 3);
+            const part1 = parallaxImages.slice(0, third);
+            const part2 = parallaxImages.slice(third, 2 * third);
+            const part3 = parallaxImages.slice(2 * third);
+
+            // Populate columns
+            function createImg(src) {
+                const div = document.createElement('div');
+                div.className = "w-full rounded-lg shadow-sm overflow-hidden bg-zinc-100 border border-zinc-100";
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = "block h-80 w-full object-cover object-center";
+                img.loading = "lazy";
+                div.appendChild(img);
+                return div;
+            }
+
+            part1.forEach(src => col1.appendChild(createImg(src)));
+            part2.forEach(src => col2.appendChild(createImg(src)));
+            part3.forEach(src => col3.appendChild(createImg(src)));
+
+            // Scroll Animation Logic
+            scrollContainer.addEventListener('scroll', () => {
+                const scrollTop = scrollContainer.scrollTop;
+                const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+                const progress = Math.min(Math.max(scrollTop / scrollHeight, 0), 1);
+
+                const yOffset = progress * -200;
+
+                const xOffset1 = progress * -200;
+                const rotate1 = progress * -20;
+
+                const xOffset3 = progress * 200;
+                const rotate3 = progress * 20;
+
+                col1.style.transform = `translate3d(${xOffset1}px, ${yOffset}px, 0) rotateZ(${rotate1}deg)`;
+                col3.style.transform = `translate3d(${xOffset3}px, ${yOffset}px, 0) rotateZ(${rotate3}deg)`;
+
+                if(progress > 0.05) {
+                    col1.style.opacity = 1;
+                    col3.style.opacity = 1;
+                }
+            });
+        });
+    </script>
+
+</body></html>
